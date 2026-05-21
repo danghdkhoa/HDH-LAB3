@@ -7,9 +7,10 @@
 
 int main(int argc, char *argv[]) {
     struct timeval start, end;
-    gettimeofday(&start, NULL);
     __pid_t pid = fork();
     if (pid == 0) {
+        gettimeofday(&start, NULL); // phai goi ham nay trong tien trinh con.
+        
         execvp(argv[1], &argv[1]);
 
         perror("Error!");

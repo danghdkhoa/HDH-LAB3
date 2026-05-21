@@ -54,7 +54,7 @@ int main() {
                 data->stop = 1;
                 break;
             }
-            usleep(200000); // Ngủ 0.2s để dễ quan sát
+            usleep(200000); 
         }
         shmdt(data);
         exit(0);
@@ -77,7 +77,7 @@ int main() {
             
             data->in = (data->in + 1) % BUFFER_SIZE;
 
-            usleep(150000); // Ngủ 0.15s
+            usleep(150000); 
         }
 
         // Đợi con kết thúc
